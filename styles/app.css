@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.container .holder {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    background-color: #1F4788;
+}
+
+.container .holder:nth-child(2) {
+    position: relative;
+    width: 50%;
+    background-image: url(../img/mountains.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container .holder h2 {
+    font-weight: 700;
+    position: absolute;
+    color: #f2f1ef;
+    white-space: nowrap;
+    font-size: 4rem;
+    line-height: 100vh; /* for vertically align h2 element */
+    animation-name: animate;
+    animation-duration: 180s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.container .holder:nth-child(2) h2 {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #f2f1ef;
+    -webkit-text-fill-color: transparent;
+    left: -100%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
